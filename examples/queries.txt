@@ -1,0 +1,16 @@
+# Find order_created events
+fields @timestamp, @message
+| filter @message like /order_created/
+| sort @timestamp desc
+| limit 20
+
+# Count events by type
+fields @message
+| parse @message '"event": "*"' as event
+| stats count() by event
+
+# Average order amount
+fields @message
+| filter @message like /order_created/
+| parse @message '"amount": *,' as amount
+| stats avg(amount) as avg_order

@@ -1,0 +1,4 @@
+Log Group Name: /aws/application/api
+Region: eu-central-1
+Log Stream: instance_id
+Purpose: Store application logs from EC2 instance

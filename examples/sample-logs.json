@@ -1,0 +1,10 @@
+{
+  "event": "order_created",
+  "level": "info",
+  "timestamp": "2026-03-18T14:40:25",
+  "correlation_id": "example-id",
+  "order_id": "ord-12345678",
+  "amount": 99.99,
+  "items": 3,
+  "user_id": "user-123"
+}

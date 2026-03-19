@@ -1,0 +1,7 @@
+{"event": "application_started", "level": "info", "timestamp": "2026-03-18 14:17:15,688", "port": 5000}
+{"event": "application_started", "level": "info", "timestamp": "2026-03-18 14:34:53,890", "port": 5000}
+{"event": "request_received", "level": "info", "timestamp": "2026-03-18 14:39:56,809", "correlation_id": "0d5e6947-e364-421c-a248-828ac6180134", "path": "/", "method": "GET", "ip": "127.0.0.1"}
+{"event": "health_check", "level": "info", "timestamp": "2026-03-18 14:40:11,798", "status": "healthy"}
+{"event": "order_created", "level": "info", "timestamp": "2026-03-18 14:40:25,197", "correlation_id": "22e50042-c9a4-4663-b24d-b69a40da4bcd", "order_id": "ord-5becd73c", "amount": 99.99, "items": 3, "user_id": "user-123"}
+{"event": "request_received", "level": "info", "timestamp": "2026-03-18 15:34:27,007", "correlation_id": "a9f6b18f-0caf-425a-9866-545159633832", "path": "/", "method": "GET", "ip": "43.248.109.214"}
+{"event": "request_received", "level": "info", "timestamp": "2026-03-18 15:36:17,837", "correlation_id": "0e4c1af6-b11d-4501-90a0-9f4ff0593016", "path": "/", "method": "GET", "ip": "58.243.46.156"}
