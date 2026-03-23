@@ -1,5 +1,5 @@
-Log Group: /aws/application/api
-Retention: 30 days
+Log Group Name: /aws/application/api
+Retention Policy: 30 days
 
 Command used:
 aws logs put-retention-policy \

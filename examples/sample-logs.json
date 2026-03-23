@@ -1,10 +1,4 @@
-{
-  "event": "order_created",
-  "level": "info",
-  "timestamp": "2026-03-18T14:40:25",
-  "correlation_id": "example-id",
-  "order_id": "ord-12345678",
-  "amount": 99.99,
-  "items": 3,
-  "user_id": "user-123"
-}
+{"event": "application_started", "level": "info", "timestamp": "2026-03-19T12:54:29", "port": 5000}
+{"event": "request_received", "level": "info", "timestamp": "2026-03-19T12:55:10", "correlation_id": "example-correlation-id-1", "path": "/", "method": "GET", "ip": "127.0.0.1"}
+{"event": "health_check", "level": "info", "timestamp": "2026-03-19T12:55:20", "status": "healthy"}
+{"event": "order_created", "level": "info", "timestamp": "2026-03-19T12:55:35", "correlation_id": "example-correlation-id-2", "order_id": "ord-1234abcd", "amount": 99.99, "items": 3, "user_id": "user-123"}

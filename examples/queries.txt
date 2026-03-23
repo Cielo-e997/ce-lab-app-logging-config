@@ -1,16 +1,25 @@
-# Find order_created events
+Find all order_created events:
 fields @timestamp, @message
-| filter @message like /order_created/
+| filter event = "order_created"
 | sort @timestamp desc
 | limit 20
 
-# Count events by type
-fields @message
-| parse @message '"event": "*"' as event
-| stats count() by event
+Calculate average order amount:
+fields amount
+| filter event = "order_created"
+| stats avg(amount) as avg_order, count() as total_orders
 
-# Average order amount
-fields @message
-| filter @message like /order_created/
-| parse @message '"amount": *,' as amount
-| stats avg(amount) as avg_order
+Count events by type:
+fields event
+| stats count() by event
+| sort count() desc
+
+Find slow requests (if duration_ms is added):
+fields @timestamp, path, duration_ms
+| filter duration_ms > 1000
+| sort duration_ms desc
+
+Track requests by correlation ID:
+fields @timestamp, event, @message
+| filter correlation_id = "your-correlation-id"
+| sort @timestamp asc
